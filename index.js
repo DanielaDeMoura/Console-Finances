@@ -86,24 +86,38 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
-// this is to work out the total number of months, I think...
+// this is to work out the total number of months. this works well.
 var totalMonths = finances.length;
 console.log("Total Months: " + totalMonths);
+
 //this is to calculate the total amount of £££
 var totalAmount = 0;
 
-for (var i = 0; i < finances.length; i++) {
+for (var i = 0; i < 86; i++) {
   totalAmount += finances[i][1]; // the [1] will open the profit and losses.
 }console.log("The total is: " + totalAmount);
+/* I am accessing the index in the first position when using i = 0; 
+and seeing if it's less than the finances thingy, and then adding  index + 1 (when using i++)
 
-/*working out the average. same thing as the total months just...
+working out the average. same thing as the total months just...
  change some of the mathematical operators */
+var average = 0;
 
-for (var i = 0; i < finances.length; i++) {
-  totalAmount += finances[i][1]; // the [1] will open the profit and losses.
-}console.log("The total is: " + totalAmount);
+for (var i = 1; i < 86; i++) {
+  average += finances[i][1] - finances[i - 1][1];
+}
+
+average /= 86 - 1; //I changed it to 86 from finance.length because it is hard for my eyes to read.
+console.log("The average is: " + average);
 
 
+//find the greatest increase and decrease
+
+/*
+to find this irl using a spreadsheet id organise it by highest and lowest numeric values.
+by finding the catogory first. in this case that would be "finances".
+I will have to research how to do this tomorrow. I think I can use a loop.
+*/
 
 /*
 
