@@ -86,13 +86,23 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
-
+// this is to work out the total number of months, I think...
 var totalMonths = finances.length;
-//console.log(totalMonths);
+console.log("Total Months: " + totalMonths);
+//this is to calculate the total amount of £££
+var totalAmount = 0;
 
-const max = Math.max(...finances);
+for (var i = 0; i < finances.length; i++) {
+  totalAmount += finances[i][1]; // the [1] will open the profit and losses.
+}console.log("The total is: " + totalAmount);
 
-console.log(max)
+/*working out the average. same thing as the total months just...
+ change some of the mathematical operators */
+
+for (var i = 0; i < finances.length; i++) {
+  totalAmount += finances[i][1]; // the [1] will open the profit and losses.
+}console.log("The total is: " + totalAmount);
+
 
 
 /*
@@ -101,6 +111,8 @@ console.log(max)
 
 
 * The net total amount of Profit/Losses over the entire period.
+
+* The total number of months included in the dataset.
 
 * The average of the **changes** in Profit/Losses over the entire period.
   * You will need to track what the total change in Profit/Losses are from month to month and then find the average.
