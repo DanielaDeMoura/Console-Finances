@@ -99,19 +99,32 @@ for (var i = 0; i < 86; i++) {
 /* I am accessing the index in the first position when using i = 0; 
 and seeing if it's less than the finances thingy, and then adding  index + 1 (when using i++)
 
+------
+
 working out the average. same thing as the total months just...
  change some of the mathematical operators */
+
 var average = 0;
 
-for (var i = 1; i < 86; i++) {
-  average += finances[i][1] - finances[i - 1][1];
+for (var i = 1; i < finances.length; i++) {
+  average += finances[i][1] - finances[i - 1][1]; //this is to calculate the changes in profit and losses.
 }
 
-average /= 86 - 1; //I changed it to 86 from finance.length because it is hard for my eyes to read.
+average /= finances.length - 1; //I changed it to 85 from finance.length because it is hard for my eyes to read.
 console.log("The average is: " + average);
 
 
-//find the greatest increase and decrease
+//find the greatest increase and decrease 
+
+finances.sort()
+
+var greatestIncrease = 0
+
+for (var i = 1; i < finances.length; i++) {
+
+
+var greatestDecrease = 0
+for (var i = 1; i < finances.length; i++) {
 
 /*
 to find this irl using a spreadsheet id organise it by highest and lowest numeric values.
@@ -124,9 +137,9 @@ I will have to research how to do this tomorrow. I think I can use a loop.
 
 
 
-* The net total amount of Profit/Losses over the entire period.
+* The net total amount of Profit/Losses over the entire period. [DONE]
 
-* The total number of months included in the dataset.
+* The total number of months included in the dataset. [DONE]
 
 * The average of the **changes** in Profit/Losses over the entire period.
   * You will need to track what the total change in Profit/Losses are from month to month and then find the average.
@@ -134,7 +147,7 @@ I will have to research how to do this tomorrow. I think I can use a loop.
   * 
   * step 1 (find highest profits )
   * step 2 (find lowest months (losses))
-  * dived the two
+  * 
 
 * The greatest increase in Profit/Losses (date and amount) over the entire period.
 
