@@ -88,7 +88,7 @@ var finances = [
 ];
 // this is to work out the total number of months. this works well.
 var totalMonths = finances.length;
-console.log("Total Months: " + totalMonths + "months.");
+console.log("Total Months: " + totalMonths + " months.");
 
 //this is to calculate the total amount of £££
 var totalAmount = 0;

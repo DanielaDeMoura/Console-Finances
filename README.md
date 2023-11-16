@@ -1,5 +1,5 @@
 # Console-Finances
-Unit 4 Challenge: Console Finances
+Unit 4 Challenge: Console Finances -> link: https://danielademoura.github.io/Console-Finances/
 
 ## About
 This project is designed to analyse financial data about past sales for a company. It processes a dataset, calculating key financial metrics and displaying the results in the console. This includes information on the company's Profit and Losses over the various months.
@@ -18,3 +18,4 @@ Greatest Increase and Decrease: Identifies the months with the highest increase 
 
 ## Important note!
 This project is designed to be run in the console, please open developer tools in your desired browser to see the project running.
+![screenshot of dev tools in browser](<readme_img/Screenshot 2023-11-16 at 16.54.23.png>)
